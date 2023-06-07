@@ -1,208 +1,60 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>HTML Page for Testing CSS</title>
-	<link rel="stylesheet" href="chota-custom.css">
-	<style>
-		body {
-			padding: 20px;
-		}
-	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5 Test Page</title>
+	<link rel="stylesheet" href="starter.css">
 </head>
-
 <body>
+	
+<header id="top-header" class="top-header">
+	<nav id="top-nav" class="top-nav"> 
+		<div id="logo">Super <span>Company</span></div>
+		<span id="menu-icon" class="menu-icon"></span>
+		<ul id="nav-list" class="nav-list">
+			<li><a href="#">Acasă</a></li>
+			<li><a href="#">Despre</a></li>
+			<li><a href="#">Servicii</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<div class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<h1>Solutii pentru compania ta</h1>
+				<div class="hero-buttons">
+					<a href="#!" class="button">Contact</a>
+					<a href="#!" class="button">Serviciile noastre</a>
+				</div><!-- .hero-buttons -->
+			</div><!-- .hero-content -->
+		</div><!-- .container -->
+	</div><!-- .hero -->
+</header>
+	
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1>Heading One</h1>
+			</div>
+			<div class="col">
+				<h2>Heading Two</h2>
+			</div>
+		</div>
+	</div><!-- .container -->
+	
+</div><!-- .section -->
 
-<h1>Testing display of HTML elements</h1>
-<p>This page contains a bunch of HTML Elements and text. You can copy the source code and use it test out various CSS Properties. For testing purposes, you may use <a href="css-linking#internal"><dfn>internal styles</dfn></a>. Recall that these CSS rules are placed in between the <code>head</code> tags using the following format:</p>
-
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-  selector {
-    property: value
-  }
-&lt;/style&gt;</code>
-</pre>
-
-
-<h1>This is 1st level heading</h1>
-<p>This is a test paragraph.</p>
-<h2>This is 2nd level heading</h2>
-<p>This is a test paragraph.</p>
-<h3>This is 3rd level heading</h3>
-<p>This is a test paragraph.</p>
-<h4>This is 4th level heading</h4>
-<p>This is a test paragraph.</p>
-<h5>This is 5th level heading</h5>
-<p>This is a test paragraph.</p>
-<h6>This is 6th level heading</h6>
-<p>This is a test paragraph.</p>
-
-<div class="container container-no-padd">
-	<div class="row">
-		<div class="col"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque enim nam assumenda quas voluptate obcaecati, fugiat doloribus illum natus necessitatibus!</p></div>
-		<div class="col"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ratione magni qui accusamus repudiandae aut maiores amet voluptatibus voluptates praesentium.</p></div>
-		<div class="col"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ratione magni qui accusamus repudiandae aut maiores amet voluptatibus voluptates praesentium.</p></div>
-		<div class="col"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ratione magni qui accusamus repudiandae aut maiores amet voluptatibus voluptates praesentium.</p></div>
-	</div>
-</div>
-
-<h2>Basic block level elements</h2>
-
-<p>This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>. You can use it for various other purposes as well, like just checking how your browser displays various HTML elements.</p> 
-
-<p>This is another paragraph. <mark>I think it needs to be added that the set of elements tested is not exhaustive in any sense.</mark> I have selected those elements for which it can make sense to write user style sheet rules, in my opinion.</p>
-
-<div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
-
-<blockquote>
-	<p>This is a <i>block quotation</i> containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.</p>
-</blockquote>
-
-<p>The following contains links to the Comm-244 home page</p>
-
-<p>
-	<a href="http://web.simmons.edu/~grovesd/comm244">Comm-244 Website</a>,
-	<a href="http://web.simmons.edu/~grovesd/comm244/week3">Week 3 page for class</A>
-</p>
-
-<h2>Lists</h2>
-
-<p>This is a paragraph before an <strong>unordered</strong> list (<code>ul</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".</p>
-
-<ul>
-	<li> One.</li>
-	<li> Two.</li>
-	<li> Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
-	<li> Four. This is the last item in this list Let us terminate the list now without making any more fuss about it.</li>
-</ul>
-
-<p>This is a paragraph before a <strong>ordered</strong> list (<code>ol</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".</p>
-
-<ol>
-  <li> One.</li>
-  <li> Two.</li>
-  <li> Three. Well, probably this list item should be longer. Note that if items are short, lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items. </li>
-  <li> Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it. </li>
-</ol>
-
-<p>This is a paragraph before a <strong>definition</strong> list (<code>dl</code>). In principle, such a list should consist of <em>terms</em> and associated definitions. But many authors use <code>dl</code> elements for fancy "layout" things. Usually the effect is not <em>too</em> bad, if you design user style sheet rules for <code>dl</code> which are suitable for real definition lists.</p>
-
-<dl>
-	<dt> recursion <dt>
-	<dd> see recursion </dd>
-	<dt> recursion, indirect</dt>
-	<dd> see indirect recursion</dd>
-	<dt> indirect recursion</dt>
-	<dd> see recursion, indirect</dd>
-	<dt> term</dt>
-	<dd> a word or other expression taken into specific use in a well-defined meaning, which is often defined rather rigorously, even formally, and may differ quite a lot from an everyday meaning</dd>
-</dl>
-
-<div class="container">
-	<h2>Forms</h2>
-
-<form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
-<div>
-<input type="hidden" name="hidden field" value="42">
-This is a form containing various fields (with some initial
-values (defaults) set, so that you can see how input text looks
-like without actually typing it):</div>
-<div><label for="but">Button:
-<button id="but" type="submit" name="foo" value="bar">A cool button</button></label></div>
-<div><label for="f0">Reset button:
-<input id="f0" type="reset" name="reset" value="Reset"></label></div>
-<div><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" value="Default text."></label></div>
-<div><label for="f2">Multi-line text input field (textarea):</label><br>
-<textarea id="f2" name="textarea" rows="2" cols="20">Default text.
-</textarea></div>
-<div>The following two radio buttons are inside
-a <code>fieldset</code> element with a <code>legend</code>:</div>
-<fieldset>
-<legend>Legend</legend>
-<div><label for="f3"><input id="f3" type="radio" name="radio" value="1"> Radio button 1</label></div>
-<div><label for="f4"><input id="f4" type="radio" name="radio" value="2" checked=""> Radio button 2 (initially checked)</label></div>
-</fieldset>
-<fieldset>
-<legend>Check those that apply</legend>
-<div><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></div>
-<div><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked=""> Checkbox 2 (initially checked)</label></div>
-</fieldset>
-<div><label for="f10">A <code>select</code> element with <code>size="1"</code>
-(dropdown box):
-<select id="f10" name="select1" size="1">
-<option>one
-</option><option selected="">two (default)
-</option><option>three
-</option></select></label></div>
-<div><label for="f11">A <code>select</code> element with <code>size="3"</code>
-(listbox):</label><br>
-<select id="f11" name="select2" size="3">
-<option>one
-</option><option selected="">two (default)
-</option><option>three
-</option></select></div>
-<div><label for="f99">Submit button:
-<input id="f99" type="submit" name="submit" value="Just a test"></label></div>
-</form>
-
-<h2>Tables</h2>
-
-<p>The following table has a caption. The first row and the first column
-contain table header cells (<code>th</code> elements) only; other cells
-are data cells (<code>td</code> elements), with <code>align="right"</code>
-attributes:</p>
-
-<table summary="Each row names a Nordic country and specifies its total area and land area, in square kilometers">
-<caption>Sample table: Areas of the Nordic countries, in sq km</caption>
-<tbody><tr><th scope="col">Country</th> <th scope="col">Total area</th> <th scope="col">Land area</th>
-</tr><tr><th scope="row">Denmark</th> <td align="RIGHT"> 43,070 </td><td align="RIGHT"> 42,370</td></tr>
-<tr><th scope="row">Finland</th> <td align="RIGHT">337,030 </td><td align="RIGHT">305,470</td></tr>
-<tr><th scope="row">Iceland</th> <td align="RIGHT">103,000 </td><td align="RIGHT">100,250</td></tr>
-<tr><th scope="row">Norway</th>  <td align="RIGHT">324,220 </td><td align="RIGHT">307,860</td></tr>
-<tr><th scope="row">Sweden</th>  <td align="RIGHT">449,964 </td><td align="RIGHT">410,928</td></tr>
-</tbody></table>
-
-<h2>Character test</h2>
-<p>The following table has some sample characters with
-annotations. If the browser�s default font does not
-contain all of them, they may get displayed using backup fonts.
-This may cause stylistic differences, but it should not
-prevent the characters from being displayed at all.</p>
-
-<table>
-<tbody><tr><th>Char. </th><th>Explanation </th><th>Notes
-</th></tr><tr><td>� </td><td>e with circumflex </td><td>Latin 1 character, should be ok
-</td></tr><tr><td>� </td><td>em dash </td><td>Windows Latin 1 character, should be ok, too
-</td></tr><tr><td>&#256; </td><td>A with macron (line above) </td><td>Latin Extended-A character, not present in all fonts
-</td></tr><tr><td>&#937; </td><td>capital omega </td><td>A Greek letter
-</td></tr><tr><td>&#8722; </td><td>minus sign </td><td>Unicode minus
-</td></tr><tr><td>&#8960; </td><td>diameter sign </td><td>relatively rare in fonts
-</td></tr></tbody></table>
-
-<h2>Hyphenation</h2>
-<p>In the following, a width setting should cause some hyphenation,
-depending on support to various methods of hyphenation.</p>
-
-<h3>CSS-based hyphenation</h3>
-<p class="limited hyphens">Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors.
-
-</p><h3>JavaScript-driven hyphenation</h3>
-<p class="limited hyphenate">Until re�cently the great ma�jor�ity of nat�u�ral�ists be�lieved that species were im�mutable pro�duc�tions, and had been sep�a�rately cre�ated. This view has been ably main�tained by many au�thors.
-
-</p><h3>Explicit hyphenation hints (soft hyphens)</h3>
-<p class="limited">Un�til re�cent�ly the great
- ma�jor�i�ty of nat�u�ral�ists
-be�lieved that spe�cies were
- im�mu�ta�ble
- pro�duc�tions,
- and had been sep�a�rate�ly cre�at�ed.
-This view has been ably main�tain�ed by many au�thors.
-
-
-</p>
-</div><!-- .container -->
-
+<footer id="footer">
+	<div class="container">
+		Footer
+	</div><!-- .container -->
+</footer>
+	
+	
+<script src="_js/script.js"></script>
+	
 </body>
-
 </html>

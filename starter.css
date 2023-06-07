@@ -1,5 +1,5 @@
-/*!
-* chota.css v0.9.2 | MIT License | https://github.com/jenil/chota
+/*
+* starter.css June 2023
 */
 :root {
 	/* Colors */
@@ -62,13 +62,17 @@ body {
 	line-height: 1.6;
 	font-size: var(--font-size);
 	color: var(--font-color);
-	font-family: "Segoe UI", "Helvetica Neue", sans-serif; /* fallback */
 	font-family: var(--font-family-sans);
 	margin: 0;
 	padding: 0;
 }
 
 /* Header Navigation */
+
+header#top-header,
+footer#footer {
+	padding: 20px calc(var(--grid-gutter) / 2) 0;
+}
 
 #top-nav {
 	display: flex;
@@ -86,17 +90,24 @@ body {
 	padding: 10px 0;
 }
 
+#logo span {
+	font-weight: normal;
+}
+
 .nav-list {
 	display: flex;
 	list-style: none;
 	padding: 0;
+	margin: 0;
 }
 
 .nav-list a {
 	display: block;
 	padding: 10px 14px;
 	margin-left: 5px;
-	background: rgba(0, 0, 0, .05);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 
@@ -161,11 +172,14 @@ a:hover:not(.button) {
 
 /* Grid */
 
+.section {
+	padding: 0 calc(var(--grid-gutter) / 2);
+}
+
 .container {
 	max-width: var(--grid-max-width);
 	margin: 0 auto;
 	width: 100%;
-	padding: 0 calc(var(--grid-gutter) / 2);
 }
 
 .container.container-no-padd {
@@ -352,7 +366,6 @@ pre code {
 
 abbr[title] {
 	border-bottom: none;
-	text-decoration: underline;
 	text-decoration: underline dotted;
 }
 
@@ -383,10 +396,9 @@ legend {
 	letter-spacing: 0.1rem;
 }
 
-input:not([type="checkbox"], [type="radio"], [type="submit"], [type="color"], [type="button"], [type="reset"]),
-select,
-textarea,
-textarea[type="text"] {
+input:not([type="checkbox"], [type="radio"], [type="submit"],
+[type="color"], [type="button"], [type="reset"]),
+select, textarea, textarea[type="text"] {
 	font-family: inherit;
 	padding: 0.8rem 1rem;
 	border-radius: 4px;
@@ -405,11 +417,7 @@ select {
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='40' fill='%23555'><polygon points='0,0 60,0 30,40'/></svg>");
 }
 
-.button,
-[type="button"],
-[type="reset"],
-[type="submit"],
-button {
+.button, [type="button"], [type="reset"], [type="submit"], button {
 	padding: 1rem 2.5rem;
 	color: var(--color-darkGrey);
 	background: var(--color-lightGrey);
@@ -425,23 +433,15 @@ button {
 	cursor: pointer;
 }
 
-.button.primary,
-.button.secondary,
-.button.dark,
-.button.error,
-.button.success,
-[type="submit"] {
+.button.primary, .button.secondary, .button.dark,
+ .button.error, .button.success, [type="submit"] {
 	color: #fff;
 	z-index: 1; /* hightlight from other button's border when grouped */
-	background-color: #000;
 	background-color: var(--color-primary);
 }
 
-.button:hover,
-[type="button"]:hover,
-[type="reset"]:hover,
-[type="submit"]:hover,
-button:hover {
+.button:hover, [type="button"]:hover, [type="reset"]:hover,
+[type="submit"]:hover, button:hover {
 	opacity: 0.8;
 }
 
@@ -477,28 +477,28 @@ button:disabled:hover {
 	border-radius: 0 4px 4px 0 !important;
 }
 
-input:not([type="checkbox"], [type="radio"], [type="submit"], [type="color"], [type="button"], [type="reset"], :disabled):hover,
-select:hover,
-textarea:hover,
-textarea[type="text"]:hover {
+input:not([type="checkbox"], [type="radio"], [type="submit"],
+[type="color"], [type="button"], [type="reset"], :disabled):hover,
+select:hover, textarea:hover, textarea[type="text"]:hover {
 	border-color: var(--color-grey);
 }
 
-input:not([type="checkbox"], [type="radio"], [type="submit"], [type="color"], [type="button"], [type="reset"]):focus,
-select:focus,
-textarea:focus,
-textarea[type="text"]:focus {
+input:not([type="checkbox"], [type="radio"], [type="submit"],
+[type="color"], [type="button"], [type="reset"]):focus,
+select:focus, textarea:focus, textarea[type="text"]:focus {
 	outline: none;
 	border-color: var(--color-primary);
 	box-shadow: 0 0 1px var(--color-primary);
 }
 
-input.error:not([type="checkbox"], [type="radio"], [type="submit"], [type="color"], [type="button"], [type="reset"]),
+input.error:not([type="checkbox"], [type="radio"],
+[type="submit"], [type="color"], [type="button"], [type="reset"]),
 textarea.error {
 	border-color: var(--color-error);
 }
 
-input.success:not([type="checkbox"], [type="radio"], [type="submit"], [type="color"], [type="button"], [type="reset"]),
+input.success:not([type="checkbox"], [type="radio"], [type="submit"],
+[type="color"], [type="button"], [type="reset"]),
 textarea.success {
 	border-color: var(--color-success);
 }
@@ -784,4 +784,34 @@ button:active:not(:disabled) {
 
 .is-hidden {
 	display: none !important;
+}
+
+/* HOME */
+
+.top-header {
+	background-image: linear-gradient(rgba(10, 35, 88, 0.1), rgba(0, 2, 94, 0.5)), url('_images/photo-solar-8b.jpg');
+}
+
+.hero-content {
+	padding: 300px 20px;
+	color: #FFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.top-nav {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 4px;
+	padding: 10px 20px;
+	backdrop-filter: blur(10px);
+}
+
+/* FOOTER */
+
+footer#footer {
+	background: rgba(0, 0, 0, .05);
+	padding-top: calc(var(--grid-gutter) * 3);
+	padding-bottom: calc(var(--grid-gutter) * 3);
 }

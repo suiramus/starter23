@@ -5,53 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 Test Page</title>
 	<link rel="stylesheet" href="chota-custom.css">
-	<style>
-		body {
-			padding: 20px;
-		}
-		
-		#logo {
-			font-weight: bold;
-			font-size: 24px;
-			line-height: 24px;
-		}
-		
-		#top-nav {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-		}
-		
-		.nav-list {display: none; list-style: none; padding: 0;}
-		.nav-list.nav-visible {display: block; width: 100%;}
-		
-		.menu-icon {
-			display: block;
-			width: 36px;
-			height: 36px;
-			background-image: url('svg/menu.svg');
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		
-		.menu-icon.menu-icon-close {
-			background-image: url('svg/close.svg');
-		}
-		
-		@media only screen and (min-width: 800px) {
-			#top-nav {
-				flex-direction: row;
-			}
-			#menu-icon {display: none;}
-			.nav-list {
-				display: flex;
-				width: auto;
-			}
-		}/* 800px */
-	</style>
   </head>
   <body>
+	
 	<header id="top-header">
 		<nav id="top-nav">
 			<div id="logo">Logo Company</div>
@@ -64,20 +20,6 @@
 			</ul>
 		  </nav>
 	</header>
-	
-	<script>
-		function toggleNav() {
-			// Toggle Menu
-			var navList = document.getElementById('nav-list');
-			navList.classList.toggle('nav-visible');
-			// Change Hamburger Icon
-			var menuIcon = document.getElementById('menu-icon');
-			menuIcon.classList.toggle('menu-icon-close');
-		}
-		// On menu click
-		var menuIcon = document.getElementById('menu-icon');
-		menuIcon.addEventListener('click', toggleNav);
-	</script>
 	
 	<div class="full-width">
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam architecto, amet ratione illo eveniet fugiat voluptate cumque sequi quod nisi consequatur qui dicta explicabo velit aut illum dolores dolore tenetur, magnam enim obcaecati? Nostrum, ipsa praesentium provident culpa blanditiis aliquam aut cupiditate temporibus unde quod aspernatur natus doloribus maiores laboriosam saepe, quisquam deleniti. Dolores facere maxime quaerat sint reiciendis recusandae dolor rem quae fugiat eos molestiae praesentium, ullam voluptas optio natus quibusdam. Voluptate quam voluptates tempora harum? Iste culpa facilis dolor repellendus ex, iure suscipit aliquid! Rem amet facere non delectus minima unde deserunt debitis dolore numquam, rerum quos nisi?</p>
@@ -628,5 +570,9 @@
         <p>Made by <a href="http://twitter.com/cbracco">@cbracco</a>. Code on <a href="http://github.com/cbracco/html5-test-page">GitHub</a>.</p>
       </footer>
     </div>
+	
+	
+	<script src="_js/script.js"></script>
+	
   </body>
 </html>
